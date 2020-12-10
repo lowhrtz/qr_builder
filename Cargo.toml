@@ -1,0 +1,23 @@
+[package]
+name = "qr_builder"
+version = "0.1.1"
+authors = ["lowhrtz <lowhrtz@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+qrcode = "0.12.0"
+image = "0.23.11"
+lodepng = "3.2.2"
+
+[lib]
+name = "qr_builder"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.12.3"
+
+[features]
+extension-module = ["pyo3/extension-module"]
+default = ["extension-module"]
